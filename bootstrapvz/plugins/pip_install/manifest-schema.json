@@ -6,7 +6,7 @@
 		"plugins": {
 			"type": "object",
 			"properties": {
-				"puppet": {
+				"pip_install": {
 					"type": "object",
 					"properties": {
 						"packages": { "$ref": "#/definitions/packages" }
