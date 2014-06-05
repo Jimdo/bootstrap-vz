@@ -2,11 +2,13 @@ from bootstrapvz.base import Task
 from bootstrapvz.common import phases
 from bootstrapvz.common.tasks import network
 from bootstrapvz.common.tasks import packages
+from bootstrapvz.common.tasks import apt
 
 
 class AddPipPackage(Task):
 	description = 'Adding `pip\' and Co. to the image packages'
 	phase = phases.preparation
+	predecessors = [apt.AddDefaultSources]
 	successors = [packages.InstallPackages]
 
 	@classmethod
